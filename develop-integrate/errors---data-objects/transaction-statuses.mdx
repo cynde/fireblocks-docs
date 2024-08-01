@@ -1,0 +1,655 @@
+---
+title: "Transaction Statuses"
+---
+
+JUMP TO
+
+## Introduction
+
+*   [API Overview](/reference/api-overview)
+*   [REST API Guide](/reference/rest-api-guide-1)
+*   [Authenticate](/reference/signing-a-request-jwt-structure)
+*   [API Idempotency](/reference/api-idempotency)
+*   [Rate Limiting](/reference/rate-limiting)
+*   [Transaction Sources & Destinations](/reference/transaction-sources-destinations)
+
+## Errors & Data Objects
+
+*   [API Responses and Error Codes](/reference/api-error-codes)
+*   [Transaction Statuses](/reference/statuses)
+    *   [Statuses](/reference/statuses)
+    *   [Sub-Statuses](/reference/sub-statuses)
+*   [Data Objects](/reference/data-objects)
+    *   [Vault Objects](/reference/vault-objects)
+    *   [Exchange Account Objects](/reference/exchange-objects)
+    *   [Fiat Account Objects](/reference/fiat-account-objects)
+    *   [Network Connection Objects](/reference/network-objects)
+    *   [Internal/External Wallet Objects](/reference/internalexternal-wallet-objects)
+    *   [Contract Objects](/reference/contract-objects)
+    *   [Blockchain & Asset Objects](/reference/supported-assets-object)
+    *   [Transaction Objects](/reference/transaction-objects)
+    *   [Transaction Authorization Objects](/reference/transaction-authorization-objects)
+    *   [Fee Estimation Objects](/reference/fee-estimation-objects)
+    *   [Transaction Screening Objects](/reference/transaction-screening-objects)
+    *   [Raw Signing Objects](/reference/raw-signing-objects)
+    *   [Payments Objects](/reference/payments-objects)
+    *   [Gas Station Objects](/reference/gas-station-objects)
+    *   [User Object](/reference/user-object)
+    *   [Webhook Object](/reference/webhook-object)
+    *   [NFT Objects](/reference/nft-objects)
+    *   [Web3 Connection Objects](/reference/web3-connection-objects)
+    *   [General Objects](/reference/general-objects)
+*   [Webhooks Data Objects](/reference/webhooks-notifications-1)
+    *   [Vault Webhooks](/reference/vault-webhooks)
+    *   [Exchange & Fiat Account Webhooks](/reference/exchange-fiat-account-webhooks)
+    *   [Network Connection Webhooks](/reference/network-connection-webhooks)
+    *   [Smart Transfer Webhooks](/reference/smart-transfer-webhooks)
+    *   [Internal, External & Contract Wallet Webhooks](/reference/internal-external-contract-wallet-webhooks)
+    *   [Transaction Webhooks](/reference/transaction-webhooks)
+    *   [NFT Webhooks](/reference/nft-webhooks)
+*   [Handle API Errors](/reference/handling-api-errors)
+
+## SDKs & Dev Tools
+
+*   [Postman Guide](/reference/explore-postman-collection)
+*   [TypeScript SDK](/reference/typescript-sdk)
+*   [Python SDK](/reference/new-python-sdk)
+*   [Java SDK](/reference/java-sdk)
+*   [JS SDK (Legacy)](/reference/js-sdk-legacy)
+*   [Python SDK (Legacy)](/reference/python-sdk)
+*   [EVM Web3 Provider](/reference/evm-web3-provider)
+*   [EVM Local JSON RPC](/reference/evm-local-json-rpc)
+*   [Hardhat Plugin](/reference/hardhat-plugin)
+*   [Solana Web3 Adapter](/reference/solana-web3-adapter)
+
+## Manage Your Workspace
+
+*   [Create API Keys](/reference/create-api-keys)
+*   [Configure Transaction Authorization Policy](/reference/configure-transaction-authorization-policy)
+
+## Manage Wallets
+
+*   [Create Vault Accounts](/reference/create-vault-account)
+*   [Create Vault Wallets](/reference/create-vault-wallet)
+*   [Create Omnibus Structure](/reference/create-omnibus-structure)
+
+## Manage Transactions
+
+*   [Create Transactions](/reference/create-transactions)
+*   [Boost Transactions](/reference/boost-transactions)
+*   [Sweep to Omnibus](/reference/sweep-to-omnibus-1)
+*   [Select UTXOs](/reference/select-utxos-for-a-transaction)
+*   [Consolidate UTXOs](/reference/consolidate-utxos)
+*   [Monitoring Transaction Statuses](/reference/monitoring-transaction-status)
+
+## Manage Transaction Fees
+
+*   [Configure Gas Station](/reference/enable-auto-fueling)
+    *   [Enable Auto Fueling](/reference/enable-auto-fueling)
+    *   [Set the Gas Station values](/reference/set-the-gas-station-values)
+    *   [Fund the Gas Station](/reference/fund-the-gas-station)
+    *   [Monitor the Gas Station](/reference/monitor-the-gas-station)
+*   [Estimate Transaction Fee](/reference/estimate-transaction-fee)
+
+## Manage Treasury
+
+*   [Execute Smart Transfers](/reference/execute-smart-transfers-1)
+*   [Stake Assets](/reference/overview-2)
+    *   [Overview](/reference/overview-2)
+    *   [Create a Staking Position](/reference/create-stake)
+    *   [Unstake & Withdraw](/reference/withdraw-staked-assets)
+*   [Connect to Exchanges & FIAT Providers](/reference/connect-to-exchanges-fiat-providers)
+
+## Comply with regulation
+
+*   [Validate Travel Rule](/reference/validate-travel-rule)
+
+## Manage Smart Contracts
+
+*   [Upload Contract Template](/reference/upload-contract-template)
+
+## Manage Assets
+
+*   [Get Supported Assets](/reference/list-supported-assets)
+*   [Add Tokens](/reference/add-your-tokens)
+*   [Manage NFTs](/reference/deploy-an-nft-collection)
+    *   [Deploy an NFT Collection](/reference/deploy-an-nft-collection)
+    *   [Mint an NFT](/reference/mint-an-nft)
+    *   [Retrieve NFTs](/reference/retrieve-nfts)
+    *   [Transfer NFTs](/reference/transfer-nfts)
+
+## SIGN OFFChain MESSAGES
+
+*   [Typed Message Signing](/reference/structuring-the-api-call)
+    *   [Structure the API Call](/reference/structuring-the-api-call)
+    *   [Sign Typed Messages in Ethereum](/reference/sign-typed-messages-for-ethereum-and-evm-networks)
+    *   [Sign Typed Messages in Tron](/reference/signing-typed-messages-in-tron)
+    *   [Sign Typed Messages in Bitcoin](/reference/signing-typed-messages-in-bitcoin)
+*   [RAW Signing](/reference/structuring-the-api-call-1)
+    *   [Structure the API Call](/reference/structuring-the-api-call-1)
+    *   [Code Examples](/reference/code-examples-2)
+*   [Caching Signatures](/reference/caching-signatures)
+
+## Automate Your Flows
+
+*   [Set API Co-Signer Callback Handler](/reference/authenticate)
+    *   [Authenticate](/reference/authenticate)
+    *   [Response Object](/reference/response-object)
+    *   [Approve Transactions](/reference/approve-transactions)
+    *   [Approve Configuration Changes](/reference/approve-configuration-changes)
+    *   [Code Examples](/reference/basic-code-example)
+        *   [Basic Code Example](/reference/basic-code-example)
+        *   [Use the Plugin Based Callback Handler](/reference/plugin-based-callback-handler)
+        *   [Validate ETH Raw Transactions](/reference/validate-eth-raw-transactions)
+*   [Consume Webhooks](/reference/configure-webhook-urls)
+    *   [Configure Webhook URLs](/reference/configure-webhook-urls)
+    *   [Validate Requests](/reference/verify-requests)
+    *   [Resend Webhook Notifications](/reference/resend-webhook-notifications)
+    *   [Code Examples](/reference/code-examples-1)
+    *   [Understand Webhook Data Objects](/reference/get-to-know-webhook-data-objects)
+
+## Create Payments
+
+*   [Execute Payouts](/reference/executing-payouts)
+*   [Create Payment Flows](/reference/create-workflows)
+    *   [Workflow Data Objects](/reference/workflow-data-objects-1)
+    *   [Create Workflow Configuration](/reference/create-workflow-configuration)
+    *   [Create Workflow Execution](/reference/create-workflow-execution)
+    *   [Launch Workflow Execution](/reference/launch-workflow-execution)
+
+## Fireblocks API
+
+*   [Workspace Management](/reference/freezeworkspace)
+    *   [Freezepost](/reference/freezeworkspace)
+    *   [List user groupsget](/reference/getusergroups)
+    *   [Create user grouppost](/reference/createusergroup)
+    *   [Get user groupget](/reference/getusergroup)
+    *   [Update user groupput](/reference/updateusergroup)
+    *   [Delete user groupdelete](/reference/deleteusergroup)
+    *   [List usersget](/reference/getusers)
+    *   [Get audit logsget](/reference/getaudits)
+    *   [Get audit logsget](/reference/getauditlogs)
+    *   [Update admin quorum thresholdput](/reference/setadminquorumthreshold)
+    *   [Enable or disable transactions to One Time Addressesput](/reference/setotastatus)
+    *   [Returns current One Time Address statusget](/reference/getotastatus)
+    *   [Returns current workspace statusget](/reference/getworkspacestatus)
+    *   [Get console usersget](/reference/getconsoleusers)
+    *   [Create console userpost](/reference/createconsoleuser)
+    *   [Get API Keysget](/reference/getapiusers)
+    *   [Create API Keypost](/reference/createapiuser)
+    *   [Resets devicepost](/reference/resetdevice)
+    *   [Get whitelisted ip addresses for an API Keyget](/reference/getwhitelistipaddresses)
+*   [Policy Editor (Beta)](/reference/getactivepolicy)
+    *   [Get the active policy and its validationget](/reference/getactivepolicy)
+    *   [Get the active draftget](/reference/getdraft)
+    *   [Update the draft with a new set of rulesput](/reference/updatedraft)
+    *   [Send publish request for a certain draft idpost](/reference/publishdraft)
+    *   [Send publish request for a set of policy rulespost](/reference/publishpolicyrules)
+*   [Compliance](/reference/validatetravelruletransaction)
+    *   [Validate Travel Rule Transactionpost](/reference/validatetravelruletransaction)
+    *   [Validate Full Travel Rule Transactionpost](/reference/validatefulltravelruletransaction)
+    *   [Get VASP detailsget](/reference/getvaspbydid)
+    *   [Get All VASPsget](/reference/getvasps)
+    *   [Add jsonDidKey to VASP detailsput](/reference/updatevasp)
+    *   [Travel Rule - View Post-Screening Policyget](/reference/getpostscreeningpolicy)
+    *   [Travel Rule - View Screening Policyget](/reference/getscreeningpolicy)
+    *   [Get Travel Rule Screening Policy Configurationget](/reference/getscreeningconfiguration)
+    *   [Update Travel Rule Configurationput](/reference/updatetravelruleconfig)
+    *   [Get AML Screening Policy Configurationget](/reference/getamlscreeningconfiguration)
+    *   [Update AML Configurationput](/reference/updateamlscreeningconfiguration)
+    *   [AML - View Screening Policyget](/reference/getamlscreeningpolicy)
+    *   [AML - View Post-Screening Policyget](/reference/getamlpostscreeningpolicy)
+    *   [Screening Configuration Updateput](/reference/updatescreeningconfiguration)
+*   [Blockchains & Assets](/reference/getsupportedassets-1)
+    *   [List all asset types supported by Fireblocksget](/reference/getsupportedassets-1)
+    *   [Register an assetpost](/reference/registernewasset)
+    *   [Validate destination addressget](/reference/validateaddress)
+    *   [Estimate the required fee for an assetget](/reference/estimatenetworkfee)
+*   [Vaults](/reference/getvaultaccounts)
+    *   [Get vault accountsget](/reference/getvaultaccounts)
+    *   [Create a new vault accountpost](/reference/createvaultaccount)
+    *   [Get vault accounts (Paginated)get](/reference/getpagedvaultaccounts)
+    *   [Get a vault account by IDget](/reference/getvaultaccount)
+    *   [Rename a vault accountput](/reference/updatevaultaccount)
+    *   [Get vault wallets (Paginated)get](/reference/getassetwallets)
+    *   [Hide a vault account in the consolepost](/reference/hidevaultaccount)
+    *   [Unhide a vault account in the consolepost](/reference/unhidevaultaccount)
+    *   [Activate a wallet in a vault accountpost](/reference/activateassetforvaultaccount)
+    *   [Set an AML/KYT customer reference ID for a vault accountpost](/reference/setvaultaccountcustomerrefid)
+    *   [Set auto fueling to on or offpost](/reference/setvaultaccountautofuel)
+    *   [Get the asset balance for a vault accountget](/reference/getvaultaccountasset)
+    *   [Create a new vault walletpost](/reference/createvaultaccountasset)
+    *   [Refresh asset balance datapost](/reference/updatevaultaccountassetbalance)
+    *   [Get asset addressesget](/reference/getvaultaccountassetaddresses)
+    *   [Create new asset deposit addresspost](/reference/createvaultaccountassetaddress)
+    *   [Get addresses (Paginated)get](/reference/getvaultaccountassetaddressespaginated)
+    *   [Get the maximum spendable amount in a single transaction.get](/reference/getmaxspendableamount)
+    *   [Update address descriptionput](/reference/updatevaultaccountassetaddress)
+    *   [Assign AML customer reference IDpost](/reference/setcustomerrefidforaddress)
+    *   [Convert a segwit address to legacy formatpost](/reference/createlegacyaddress)
+    *   [Get UTXO unspent inputs informationget](/reference/getunspentinputs)
+    *   [Get the public key for a derivation pathget](/reference/getpublickeyinfo)
+    *   [Get the public key of an asset in a vault accountget](/reference/getpublickeyinfoforaddress)
+    *   [Get asset balance for chosen assetsget](/reference/getvaultassets)
+    *   [Get vault balance by an assetget](/reference/getvaultbalancebyasset)
+*   [Transactions](/reference/gettransactions)
+    *   [Get transaction historyget](/reference/gettransactions)
+    *   [Create a new transactionpost](/reference/createtransaction)
+    *   [Estimate transaction feepost](/reference/estimatetransactionfee)
+    *   [Get a specific transaction by Fireblocks transaction IDget](/reference/gettransaction)
+    *   [Get a specific transaction by external transaction IDget](/reference/gettransactionbyexternalid)
+    *   [Set confirmation threshold by Fireblocks Transaction IDpost](/reference/settransactionconfirmationthreshold)
+    *   [Drop ETH (EVM) transaction by IDpost](/reference/droptransaction)
+    *   [Cancel a transactionpost](/reference/canceltransaction)
+    *   [Freeze a transactionpost](/reference/freezetransaction)
+    *   [Unfreeze a transactionpost](/reference/unfreezetransaction)
+    *   [Set confirmation threshold by transaction hashpost](/reference/setconfirmationthresholdbytransactionhash)
+*   [Gas Station](/reference/getgasstationinfo)
+    *   [Get gas station settingsget](/reference/getgasstationinfo)
+    *   [Get gas station settings by assetget](/reference/getgasstationbyassetid)
+    *   [Edit gas station settingsput](/reference/updategasstationconfiguration)
+    *   [Edit gas station settings for an assetput](/reference/updategasstationconfigurationbyassetid)
+*   [Whitelisted Internal Wallets](/reference/getinternalwallets)
+    *   [List internal walletsget](/reference/getinternalwallets)
+    *   [Create an internal walletpost](/reference/createinternalwallet)
+    *   [Get assets for internal walletget](/reference/getinternalwallet)
+    *   [Delete an internal walletdelete](/reference/deleteinternalwallet)
+    *   [Set an AML/KYT customer reference ID for an internal walletpost](/reference/setcustomerrefidforinternalwallet)
+    *   [Get an asset from an internal walletget](/reference/getinternalwalletasset)
+    *   [Add an asset to an internal walletpost](/reference/createinternalwalletasset)
+    *   [Delete a whitelisted address from an internal walletdelete](/reference/deleteinternalwalletasset)
+*   [Whitelisted External Wallets](/reference/getexternalwallets)
+    *   [List external walletsget](/reference/getexternalwallets)
+    *   [Create an external walletpost](/reference/createexternalwallet)
+    *   [Find an external walletget](/reference/getexternalwallet)
+    *   [Delete an external walletdelete](/reference/deleteexternalwallet)
+    *   [Set an AML customer reference ID for an external walletpost](/reference/setexternalwalletcustomerrefid)
+    *   [Get an asset from an external walletget](/reference/getexternalwalletasset)
+    *   [Add an asset to an external wallet.post](/reference/addassettoexternalwallet)
+    *   [Delete an asset from an external walletdelete](/reference/removeassetfromexternalwallet)
+*   [Whitelisted Contracts](/reference/getcontracts)
+    *   [List Whitelisted Contractsget](/reference/getcontracts)
+    *   [Create a Whitelisted Contractpost](/reference/createcontract)
+    *   [Find a Specific Whitelisted Contractget](/reference/getcontract)
+    *   [Delete a Whitelisted Contractdelete](/reference/deletecontract)
+    *   [Find a whitelisted contract's assetget](/reference/getcontractasset)
+    *   [Add an Asset to a Whitelisted Contractpost](/reference/addcontractasset)
+    *   [Delete a Whitelisted Contract's Assetdelete](/reference/deletecontractasset)
+*   [Fireblocks Network](/reference/getnetworkconnections)
+    *   [List network connectionsget](/reference/getnetworkconnections)
+    *   [Creates a new network connectionpost](/reference/createnetworkconnection)
+    *   [Update network connection routing policy.patch](/reference/setroutingpolicy)
+    *   [Retrieve third-party network routing validation by asset type.get](/reference/checkthirdpartyrouting)
+    *   [Get a network connectionget](/reference/getnetwork)
+    *   [Deletes a network connection by IDdelete](/reference/deletenetworkconnection)
+    *   [Returns all network IDs, both local IDs and discoverable remote IDsget](/reference/getnetworkids)
+    *   [Creates a new Network IDpost](/reference/createnetworkid)
+    *   [Returns all enabled routing policy asset groupsget](/reference/getroutingpolicyassetgroups)
+    *   [Returns specific network ID.get](/reference/getnetworkid)
+    *   [Deletes specific network ID.delete](/reference/deletenetworkid)
+    *   [Update network id routing policy.patch](/reference/setnetworkidroutingpolicy)
+    *   [Update network ID's discoverability.patch](/reference/setnetworkiddiscoverability)
+    *   [Update network ID's name.patch](/reference/setnetworkidname)
+*   [Smart Transfers](/reference/createticket)
+    *   [Create Ticketpost](/reference/createticket)
+    *   [Find Ticketget](/reference/searchtickets)
+    *   [Search Ticket by IDget](/reference/findticketbyid)
+    *   [Set expirationput](/reference/setticketexpiration)
+    *   [Add external ref. IDput](/reference/setexternalrefid)
+    *   [Submit ticketput](/reference/submitticket)
+    *   [Fund ticket manuallyput](/reference/fulfillticket)
+    *   [Cancel Ticketput](/reference/cancelticket)
+    *   [Create leg (term)post](/reference/createticketterm)
+    *   [Get Smart Transfer ticket termget](/reference/findtickettermbyid)
+    *   [Update ticket leg (term)put](/reference/updateticketterm)
+    *   [Delete ticket leg (term)delete](/reference/removeticketterm)
+    *   [Define funding sourceput](/reference/fundticketterm)
+    *   [Manually add term transactionput](/reference/manuallyfundticketterm)
+    *   [Set user grouppost](/reference/setusergroups)
+    *   [Get user groupget](/reference/getsmarttransferusergroups)
+*   [Exchange Accounts](/reference/getexchangeaccounts)
+    *   [List exchange accountsget](/reference/getexchangeaccounts)
+    *   [List connected exchange accountsget](/reference/getpagedexchangeaccounts)
+    *   [Get a specific exchange accountget](/reference/getexchangeaccount)
+    *   [Internal transfer for exchange accountspost](/reference/internaltransfer)
+    *   [Convert exchange account funds from the source asset to the destination assetpost](/reference/convertassets)
+    *   [Get an asset for an exchange accountget](/reference/getexchangeaccountasset)
+*   [Fiat Accounts](/reference/getfiataccounts)
+    *   [List fiat accountsget](/reference/getfiataccounts)
+    *   [Find a specific fiat accountget](/reference/getfiataccount)
+    *   [Redeem funds to DDApost](/reference/redeemfundstolinkeddda)
+    *   [Deposit funds from DDApost](/reference/depositfundsfromlinkeddda)
+*   [Tokenization](/reference/issuenewtoken)
+    *   [Issue a new tokenpost](/reference/issuenewtoken)
+    *   [List all linked tokensget](/reference/getlinkedtokens)
+    *   [Link a tokenpost](/reference/link)
+    *   [Unlink a tokendelete](/reference/unlink)
+    *   [Return a linked tokenget](/reference/getlinkedtoken)
+*   [Contract Templates](/reference/getcontracttemplates)
+    *   [List all contract templatesget](/reference/getcontracttemplates)
+    *   [Upload contract templatepost](/reference/uploadcontracttemplate)
+    *   [Return contract template by idget](/reference/getcontracttemplatebyid)
+    *   [Delete a contract template by iddelete](/reference/deletecontracttemplatebyid)
+    *   [Return contract template's constructorget](/reference/getconstructorbycontracttemplateid)
+    *   [Return contract template's functionget](/reference/getfunctionabibycontracttemplateid)
+    *   [Deploy contractpost](/reference/deploycontract)
+*   [Deployed Contracts](/reference/getdeployedcontracts)
+    *   [List deployed contracts dataget](/reference/getdeployedcontracts)
+    *   [Return deployed contract data by idget](/reference/getdeployedcontractbyid)
+    *   [Return deployed contract dataget](/reference/getdeployedcontractbyaddress)
+*   [Contract Interactions](/reference/getdeployedcontractabi)
+    *   [Return deployed contract's ABIget](/reference/getdeployedcontractabi)
+    *   [Call a read function on a deployed contractpost](/reference/readcallfunction)
+    *   [Call a write function on a deployed contractpost](/reference/writecallfunction)
+*   [Staking](/reference/getchains)
+    *   [List supported chains for Fireblocks Stakingget](/reference/getchains)
+    *   [Get chain-specific staking summaryget](/reference/getchaininfo)
+    *   [Execute a staking actionpost](/reference/executeaction)
+    *   [List staking positions detailsget](/reference/getalldelegations)
+    *   [Get staking summary detailsget](/reference/getsummary)
+    *   [Get staking summary details by vaultget](/reference/getsummarybyvault)
+    *   [Get staking position detailsget](/reference/getdelegationbyid)
+    *   [List staking providers detailsget](/reference/getproviders)
+    *   [Approve staking terms of servicepost](/reference/approvetermsofservicebyproviderid)
+*   [NFTs](/reference/updateownershiptokens)
+    *   [Refresh vault account tokensput](/reference/updateownershiptokens)
+    *   [List all owned tokens (paginated)get](/reference/getownershiptokens)
+    *   [List all distinct owned tokens (paginated)get](/reference/listownedtokens)
+    *   [List owned collections (paginated)get](/reference/listownedcollections)
+    *   [Refresh token metadataput](/reference/refreshnftmetadata)
+    *   [List token data by IDget](/reference/getnft)
+    *   [List tokens by IDsget](/reference/getnfts)
+    *   [Update token ownership statusput](/reference/updatetokenownershipstatus)
+    *   [Update tokens ownership statusput](/reference/updatetokensownershipstatus)
+    *   [Update tokens ownership spam propertyput](/reference/updatetokensownershipspam)
+*   [dApp Connections](/reference/get)
+    *   [List all open dApp connectionsget](/reference/get)
+    *   [Create a new dApp connection.post](/reference/create)
+    *   [Respond to a pending dApp connection requestput](/reference/submit)
+    *   [Remove an existing dApp connectiondelete](/reference/remove)
+*   [Cosigners (Beta)](/reference/getcosigners)
+    *   [Get all cosignersget](/reference/getcosigners)
+    *   [Get cosignerget](/reference/getcosigner)
+    *   [Rename cosignerpatch](/reference/renamecosigner)
+    *   [Get all API keysget](/reference/getapikeys)
+    *   [Get API keyget](/reference/getapikey)
+*   [Webhooks](/reference/resendwebhooks)
+    *   [Resend failed webhookspost](/reference/resendwebhooks)
+    *   [Resend webhooks for a transaction by IDpost](/reference/resendtransactionwebhooks)
+*   [Off Exchange](/reference/addoffexchange)
+    *   [add collateralpost](/reference/addoffexchange)
+    *   [remove collateralpost](/reference/removeoffexchange)
+    *   [create settlement for a traderpost](/reference/settleoffexchangetrades)
+    *   [get settlements transactions from exchangeget](/reference/getoffexchangesettlementtransactions)
+    *   [Find a specific collateral exchange accountget](/reference/getoffexchangecollateralaccounts)
+*   [Payments - Payout](/reference/createpayout)
+    *   [Create a payout instruction setpost](/reference/createpayout)
+    *   [Execute a payout instruction setpost](/reference/executepayoutaction)
+    *   [Get the status of a payout instruction setget](/reference/getpayout)
+*   [Payments - Flows](/reference/createflowconfiguration)
+    *   [Create payment flow configurationpost](/reference/createflowconfiguration)
+    *   [Retrieve workflow configurationget](/reference/getflowconfiguration)
+    *   [Delete workflow configurationdelete](/reference/deleteflowconfiguration)
+    *   [Create workflow executionpost](/reference/createflowexecution)
+    *   [Get workflow execution detailsget](/reference/getflowexecution)
+    *   [Execute the payments workflowpost](/reference/launchflowexecution)
+*   [Key Link (Beta)](/reference/createsigningkey)
+    *   [Add a new signing keypost](/reference/createsigningkey)
+    *   [Get list of signing keysget](/reference/getsigningkeyslist)
+    *   [Get a signing key by \`keyId\`get](/reference/getsigningkey)
+    *   [Modify the signing by Fireblocks provided \`keyId\`patch](/reference/updatesigningkey)
+    *   [Set agent user id that can sign with the signing key identified by the Fireblocks provided \`keyId\`patch](/reference/setagentid)
+    *   [Add a new validation keypost](/reference/createvalidationkey)
+    *   [Get list of registered validation keysget](/reference/getvalidationkeyslist)
+    *   [Get a validation key by \`keyId\`get](/reference/getvalidationkey)
+    *   [Disables a validation keypatch](/reference/disablevalidationkey)
+
+## NCW API
+
+*   [Non Custodial Wallets](/reference/create-1)
+    *   [Create a new walletpost](/reference/create-1)
+    *   [List walletsget](/reference/findallwallets)
+    *   [Get a walletget](/reference/findonewallet)
+    *   [Get wallet Latest Backup detailsget](/reference/getlatestbackup)
+    *   [Get wallet key setup stateget](/reference/getwalletsetupstate)
+    *   [Enable or disable a walletput](/reference/enablewallet)
+*   [Non Custodial Wallet Accounts](/reference/createaccount)
+    *   [Create a new accountpost](/reference/createaccount)
+    *   [Get accountsget](/reference/findallaccounts)
+    *   [Get an accountget](/reference/findoneaccount)
+*   [Non Custodial Wallet Assets](/reference/getassets)
+    *   [Retrieve assetsget](/reference/getassets)
+    *   [Retrieve assetget](/reference/getasset)
+    *   [Add asset to accountpost](/reference/addasset)
+    *   [Refresh asset balanceput](/reference/refreshassetbalance)
+    *   [Retrieve asset balanceget](/reference/getassetbalance)
+    *   [Retrieve asset addressesget](/reference/getaddresses)
+    *   [Retrieve supported assetsget](/reference/getsupportedassets)
+*   [Non Custodial Wallet Devices](/reference/getdevices)
+    *   [Get registered devicesget](/reference/getdevices)
+    *   [Enable or Disable deviceput](/reference/enabledevice)
+    *   [Get device key setup stateget](/reference/getdevicesetupstate)
+*   [Non Custodial Wallets RPC](/reference/invokerpc)
+    *   [Invoke RPCpost](/reference/invokerpc)
+
+# [Overview](#overview)
+
+This article describes primary transaction statuses on Fireblocks and how they appear in the Fireblocks Console and API.
+
+Many primary transaction statuses have substatuses that include additional status-related information. Learn more about [transaction substatuses](/reference/transaction-substatuses).
+
+Transaction statuses are displayed in the Transaction History and the Recent Activity panel in the Fireblocks Console. You can hover over the status in the Recent Activity panel to see the substatus and additional details.
+
+![](https://files.readme.io/51f0c38-Transaction_status_tooltip.jpg)
+
+# [Primary transaction statuses](#primary-transaction-statuses)
+## [Submitted](#submitted)
+
+The **Submitted** status indicates an outgoing transaction was submitted to the Fireblocks system and is currently being processed. It is the first stage for any outgoing transaction where AML/KYC screening is not enabled.
+
+*   **API status code:** SUBMITTED
+*   **Appears in the Fireblocks Console as:** Submitted
+
+The status can be followed by **Queued** and then continue being processed.
+
+Submitted transactions can be blocked by the Fireblocks Policy Engine or otherwise fail, with a substatus that includes additional information.
+
+* * *
+
+## [Pending Screening](#pending-screening)
+
+The **Pending Screening** status indicates a transaction’s progress depends on the transaction screening result from your Anti-Money Laundering (AML) provider or Travel Rule provider. Only transactions from workspaces with the AML or Travel Rule feature enabled can have this status.
+
+*   **API status code:** PENDING\_AML\_SCREENING
+*   **Appears in the Fireblocks Console as:** Pending Screening
+
+This transaction status is not the same as the transaction’s [AML screening status](https://support.fireblocks.io/hc/en-us/articles/360014290380#screening-statuses-0-6) or [Travel Rule screening status](https://support.fireblocks.io/hc/en-us/articles/8271647366812-Travel-Rule-transaction-screening). Under certain circumstances, a transaction’s _screening_ status can appear as **Pending** even when its transaction status shows as **Completed** on the Recent Activity panel. When you receive the screening result, you can view it in the transaction’s details on the Transaction History page.
+
+* * *
+
+## [Pending Security Screening](#pending-security-screening)
+
+The **Pending Security Screening** status indicates a transaction’s progress depends on the result of Fireblocks’ internal security screening, which looks for various anomalies and similarities to known smart contract attacks. This internal security screening takes place while initiating a transaction. Please note that this security screening will not affect the approval flow of your transactions.
+
+[Learn more about the dApp Protection feature and its security screening](https://support.fireblocks.io/hc/en-us/articles/11497035958940-dApp-Protection).
+
+*   **API status code:** PENDING\_ENRICHMENT
+*   **Appears in the Fireblocks Console as:** Pending Security Screening
+
+This transaction status is not the same as the **Pending Screening** status, which correlates to the screening from your AML or Travel Rule provider.
+
+* * *
+
+## [Pending Authorization](#pending-authorization)
+
+The **Pending Authorization** status indicates an outgoing transaction’s progress depends on a Fireblocks Console user, an API user, or a group of users authorizing the transaction, as defined by the Transaction Authorization Policy (TAP).
+
+*   **API status code:** PENDING\_AUTHORIZATION
+*   **Appears in the Fireblocks Console as:** Pending Authorization
+
+This status should be followed by **Queued** if the transaction is authorized or **Cancelled** if the transaction is not authorized. If no action is taken for two hours, the transaction will fail. Learn more about [transaction authorization expiration](https://support.fireblocks.io/hc/en-us/articles/360015963760).
+
+* * *
+
+## [Queued](#queued)
+
+The **Queued** status indicates an outgoing transaction is queued for processing.
+
+*   **API status code:** QUEUED
+*   **Appears in the Fireblocks Console as:** Queued
+
+Fireblocks can only process a single transaction per blockchain standard per vault account. For example, if you create a transaction for an Ethereum blockchain asset and another transaction for a Polygon blockchain asset from the same vault account, then Fireblocks will process them one at a time for signing because they are both EVM-compatible assets. However, if you create a Bitcoin transaction and a Solana transaction from the same vault account, then both transactions will be processed simultaneously.
+
+### [Transactions stuck in the Queued status](#transactions-stuck-in-the-queued-status)
+
+When a transaction appears stuck in the **Queued** status, you should check for another transaction in the **Pending Signature** status. This transaction's details will show the user or users who need to sign or reject the transaction for it to progress, which will allow the next transaction to progress.
+
+To help streamline signing and avoid delays associated with manual signing, we recommend that you install and configure an API Co-Signer to process and sign transactions automatically according to your TAP rules.
+
+* * *
+
+## [Pending Signature](#pending-signature)
+
+The **Pending Signature** status indicates an outgoing transaction is waiting to be signed by the transaction’s designated signer as defined in your TAP. You can view who the designated signer is by hovering over the transaction's status in the Recent Activity panel.
+
+*   **API status code:** PENDING\_SIGNATURE
+*   **Appears in the Fireblocks Console as:** Pending Signature
+
+If no action is taken for two hours after authorization, the transaction will fail. Learn more about [transaction signing expiration](https://support.fireblocks.io/hc/en-us/articles/360015963760).
+
+To help streamline signing and avoid delays associated with manual signing, we recommend installing and configuring an API Co-Signer to process and sign transactions automatically according to your TAP rules.
+
+* * *
+
+## [Pending email approval](#pending-email-approval)
+
+The **Pending email approval** status indicates the transaction is waiting for the required approval from a third-party service, such as an exchange. The manual approval is usually sent via email.
+
+*   **API status code:** PENDING\_3RD\_PARTY\_MANUAL\_APPROVAL
+*   **Appears in the Fireblocks Console as:** Pending email approval
+
+* * *
+
+## [Processing at the exchange](#processing-at-the-exchange)
+
+The **Processing at the exchange** status indicates a transaction is waiting for approval by a third-party service, such as an exchange.
+
+*   **API status code:** PENDING\_3RD\_PARTY
+*   **Appears in the Fireblocks Console as:** Processing at the exchange
+
+Learn more about [Processing at the exchange substatuses](/reference/transaction-substatuses#pending_3rd_party-substatuses).
+
+* * *
+
+## [Broadcasting](#broadcasting)
+
+The **Broadcasting** status indicates an outgoing transaction is being broadcast to the blockchain network.
+
+*   **API status code:** BROADCASTING
+*   **Appears in the Fireblocks Console as:** Broadcasting
+
+Typically, a transaction should remain in this status for no longer than one minute, but it depends on the current load on the Fireblocks system. When a transaction remains in this status for longer than one minute, check the [Fireblocks Status page](https://status.fireblocks.com/) to see if there are ongoing service disruptions. If you don’t see any service disruptions, contact Fireblocks Support for assistance.
+
+* * *
+
+## [Confirming](#confirming)
+
+The **Confirming** status indicates a transaction is waiting to be confirmed on the blockchain. Fireblocks monitors the state of the transaction on the blockchain and updates its status accordingly.
+
+*   **API status code:** CONFIRMING
+*   **Appears in the Fireblocks Console as:** Confirming
+
+Learn more about [Confirming substatuses](/reference/transaction-substatuses#confirming-substatuses).
+
+* * *
+
+## [Completed](#completed)
+
+The **Completed** status indicates the transaction was completed successfully, is now part of the blockchain, and all assets have been transferred.
+
+*   **API status code:** COMPLETED
+*   **Appears in the Fireblocks Console as:** Completed
+
+**Completed** is a final transaction status and marks the transaction as successful. After a transaction is marked as completed, all associated assets are no longer available in their source account.
+
+<Info>
+
+## 📘
+
+Note
+
+If you use [webhooks](https://support.fireblocks.io/hc/en-us/articles/4408110107794) to receive transaction status updates, you may receive multiple updates to the **Completed** status. For example, if your Deposit Control & Confirmation Policy is set for zero confirmations for a particular blockchain, you may receive a webhook notification for the **Completed** status when the transaction appears on the blockchain as well as on its first or further confirmations.
+
+</Info>
+
+Learn more about [Completed substatuses](/reference/transaction-substatuses#completed-substatuses).
+
+* * *
+
+## [Cancelling](#cancelling)
+
+The **Cancelling** status indicates a transaction was canceled or rejected by a Fireblocks user, such as the transaction’s initiator, approver, or designated signer.
+
+*   **API status code:** CANCELLING
+*   **Appears in the Fireblocks Console as:** Cancelling
+
+Typically, a transaction should remain in this status for no longer than 30 seconds, but it depends on the current load on the Fireblocks system. When a transaction remains in this status for longer than 30 seconds, check the [Fireblocks Status page](https://status.fireblocks.com/) to see if there are ongoing service disruptions. If you don’t see any service disruptions, contact Fireblocks Support for assistance.
+
+* * *
+
+## [Cancelled](#cancelled)
+
+The **Cancelled** status indicates a transaction was canceled or rejected by a Fireblocks user, such as the transaction’s initiator, approver, or designated signer, or by the third-party service that was the source of the transaction.
+
+*   **API status code:** CANCELLED
+*   **Appears in the Fireblocks Console as:** Cancelled
+
+**Cancelled** is a final transaction status and marks the transaction as unsuccessful. After a transaction is marked as canceled, all associated assets are available for new transactions.
+
+Learn more about [Cancelled substatuses](/reference/transaction-substatuses#cancelled-substatuses).
+
+* * *
+
+## [Blocked by policy](#blocked-by-policy)
+
+The **Blocked by policy** status indicates an outgoing transaction was blocked from being completed due to a TAP rule.
+
+*   **API status code:** BLOCKED
+*   **Appears in the Fireblocks Console as:** Blocked by policy
+
+**Blocked by policy** is a final transaction status and marks the transaction as unsuccessful. After a transaction is marked as blocked, all associated assets are available for new transactions.
+
+### [Resolving blocked transactions](#resolving-blocked-transactions)
+
+Transactions that are blocked by policy include the corresponding TAP rule number as it appears in your workspace's settings. If you want to allow these transactions, create a new policy rule in a position that allows the transaction to be correctly enforced according to the first-match principle.
+
+Learn more about [Blocked by policy substatuses](/reference/transaction-substatuses#blocked-substatuses).
+
+* * *
+
+## [Rejected](#rejected)
+
+The **Rejected** status indicates an incoming or outgoing transaction was rejected by the Fireblocks system, an Approver or a Signer, or by a third-party service.
+
+*   **API status code:** REJECTED
+*   **Appears in the Fireblocks Console as:** Rejected by AML, Manually frozen
+
+Transactions that are rejected or manually frozen mark the transaction as unsuccessful. Note that:
+
+*   After an _outgoing_ transaction is marked as rejected, all associated assets are available for new transactions.
+*   After an _incoming_ transaction is marked as rejected, all associated assets will not be available until an Admin-level user unfreezes them.
+
+Learn more about [Rejected substatuses](/reference/transaction-substatuses#rejected-substatuses).
+
+* * *
+
+## [Failed](#failed)
+
+The **Failed** status indicates the transaction is no longer being processed and no assets have been transferred. Transactions can fail from any state.
+
+*   **API status code:** FAILED
+*   **Appears in the Fireblocks Console as:** Failed
+
+**Failed** is a final transaction status and marks the transaction as unsuccessful. After a transaction is marked as failed, all associated assets are available for new transactions.
+
+Learn more about [Failed substatuses](/reference/transaction-substatuses#failed-substatuses).
