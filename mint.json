@@ -25,7 +25,7 @@
     "name": "Dashboard",
     "url": "https://dashboard.mintlify.com"
   },
-  "navigation": [
+    "navigation": [
         {
             "group": "Gen Ai Studio Products",
             "pages": [
@@ -258,6 +258,116 @@
                         "---gen-ai-studio-products/------galileo-ai-research/class-boundary-detection",
                         "---gen-ai-studio-products/------galileo-ai-research/errors-in-object-detection",
                         "---gen-ai-studio-products/------galileo-ai-research/automatic-prompt-optimization"
+                    ]
+                }
+            ]
+        },
+        {
+            "group": "Galileo Nlp Studio",
+            "pages": [
+                "---galileo-nlp-studio/train-high-quality-supervised-nlp-models",
+                {
+                    "group": "Text Classification",
+                    "pages": [
+                        "---galileo-nlp-studio/text-classification",
+                        "---galileo-nlp-studio/text-classification/getting-started",
+                        "---galileo-nlp-studio/text-classification/logging-data-to-galileo",
+                        "---galileo-nlp-studio/text-classification/model-monitoring-and-data-drift",
+                        "---galileo-nlp-studio/text-classification/-build-your-own-conditions",
+                        "---galileo-nlp-studio/text-classification/--automated-production-monitoring"
+                    ]
+                },
+                {
+                    "group": "Multi Label Text Classification",
+                    "pages": [
+                        "---galileo-nlp-studio/multi-label-text-classification",
+                        "---galileo-nlp-studio/multi-label-text-classification/getting-started"
+                    ]
+                },
+                {
+                    "group": "Named Entity Recognition",
+                    "pages": [
+                        "---galileo-nlp-studio/named-entity-recognition",
+                        "---galileo-nlp-studio/named-entity-recognition/getting-started",
+                        "---galileo-nlp-studio/named-entity-recognition/model-monitoring-and-data-drift"
+                    ]
+                },
+                {
+                    "group": "Natural Language Inference",
+                    "pages": [
+                        "---galileo-nlp-studio/natural-language-inference",
+                        "---galileo-nlp-studio/natural-language-inference/getting-started",
+                        "---galileo-nlp-studio/natural-language-inference/logging-data-to-galileo",
+                        "---galileo-nlp-studio/natural-language-inference/model-monitoring-and-data-drift"
+                    ]
+                },
+                "---galileo-nlp-studio/galileo---delta-lake--databricks-"
+            ]
+        },
+        {
+            "group": "How To And Faq",
+            "pages": [
+                {
+                    "group": "Product Features",
+                    "pages": [
+                        "how-to-and-faq/---product-features",
+                        "how-to-and-faq/---product-features/dataset-view",
+                        "how-to-and-faq/---product-features/embeddings-view",
+                        "how-to-and-faq/---product-features/insights-panel",
+                        "how-to-and-faq/---product-features/alerts",
+                        "how-to-and-faq/---product-features/clustering",
+                        "how-to-and-faq/---product-features/error-types-breakdown",
+                        "how-to-and-faq/---product-features/similarity-search",
+                        "how-to-and-faq/---product-features/dataset-slices",
+                        "how-to-and-faq/---product-features/actions",
+                        "how-to-and-faq/---product-features/compare-across-runs",
+                        "how-to-and-faq/---product-features/third-party--3p--integrations"
+                    ]
+                },
+                "how-to-and-faq/---faqs",
+                {
+                    "group": "Enterprise Deployment",
+                    "pages": [
+                        "how-to-and-faq/---enterprise-deployment",
+                        "how-to-and-faq/---enterprise-deployment/--pre-requisites",
+                        "how-to-and-faq/---enterprise-deployment/--dependencies",
+                        "how-to-and-faq/---enterprise-deployment/--setting-up-new-users",
+                        {
+                            "group": "Deploying Galileo   Eks",
+                            "pages": [
+                                "how-to-and-faq/---enterprise-deployment/--deploying-galileo---eks",
+                                "how-to-and-faq/---enterprise-deployment/--deploying-galileo---eks/eks-cluster-config-example",
+                                "how-to-and-faq/---enterprise-deployment/--deploying-galileo---eks/updating-galileo-eks-cluster"
+                            ]
+                        },
+                        {
+                            "group": "Deploying Galileo   Eks  Zero Access",
+                            "pages": [
+                                "how-to-and-faq/---enterprise-deployment/--deploying-galileo---eks--zero-access-",
+                                "how-to-and-faq/---enterprise-deployment/--deploying-galileo---eks--zero-access-/eks-cluster-config-example--zero-access-"
+                            ]
+                        },
+                        {
+                            "group": "Deploying Galileo   Gke",
+                            "pages": [
+                                "how-to-and-faq/---enterprise-deployment/--deploying-galileo---gke",
+                                "how-to-and-faq/---enterprise-deployment/--deploying-galileo---gke/galileo-gcp-setup-script"
+                            ]
+                        },
+                        "how-to-and-faq/---enterprise-deployment/--deploying-galileo---aks",
+                        "how-to-and-faq/---enterprise-deployment/--deploying-galileo---exoscale",
+                        "how-to-and-faq/---enterprise-deployment/-----post-deployment-checklist",
+                        {
+                            "group": "Scheduling Automatic Backups For Your Cluster",
+                            "pages": [
+                                "how-to-and-faq/---enterprise-deployment/--scheduling-automatic-backups-for-your-cluster",
+                                "how-to-and-faq/---enterprise-deployment/--scheduling-automatic-backups-for-your-cluster/aws-velero-account-setup-script",
+                                "how-to-and-faq/---enterprise-deployment/--scheduling-automatic-backups-for-your-cluster/gcp-velero-account-setup-script"
+                            ]
+                        },
+                        "how-to-and-faq/---enterprise-deployment/--sso-integration",
+                        "how-to-and-faq/---enterprise-deployment/--security---access-control",
+                        "how-to-and-faq/---enterprise-deployment/--data-privacy-and-compliance"
                     ]
                 }
             ]
